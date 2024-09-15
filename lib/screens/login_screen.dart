@@ -1,8 +1,10 @@
+ 
+
+
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:rest_api/managers/login_form_manager.dart';
 import 'package:rest_api/screens/widget/custom_text_form_field.dart';
-
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -40,7 +42,7 @@ class LoginScreen extends StatelessWidget {
                       controller: manager.passwordController,
                       labelText: 'Password',
                       icon: Icons.lock,
-                      obscureText: true,
+                      obscureText: true, // Password field
                       validator: manager.validatePassword,
                     ),
                     const SizedBox(height: 20),

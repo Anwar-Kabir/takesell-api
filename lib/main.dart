@@ -23,11 +23,11 @@ class MyApp extends StatelessWidget {
       ],
       child: Consumer<AuthProvider>(
         builder: (ctx, auth, _) => MaterialApp(
-          home: auth.isAuthenticated ?   BottomNavbar() :   BottomNavbar(),
+          home: auth.isAuthenticated ?   const BottomNavbar() : const LoginScreen(),
           routes: {
             '/login': (ctx) => const LoginScreen(),
             '/signup': (ctx) => const SignupScreen(),
-            '/home': (ctx) =>   HomePage(),
+            '/home': (ctx) =>   const HomePage(),
           },
         ),
       ),
